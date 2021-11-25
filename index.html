@@ -20,12 +20,16 @@
         <script  type="text/babel">
         class App extends React.Component{
             state={
-                name:'hachem',
+                name:'Hachem',
                 age:32
             }
 
             handleClick=(e)=>{
                // console.log(e.target);
+               console.log(this.state);
+               this.setState({
+                    name:'Ahmed'
+               })
                console.log(this.state);
             }
             render(){
