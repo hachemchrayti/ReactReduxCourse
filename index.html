@@ -23,12 +23,19 @@
                 name:'hachem',
                 age:32
             }
+
+            handleClick=(e)=>{
+               // console.log(e.target);
+               console.log(this.state);
+            }
             render(){
                 return (
                     <div className="app-content">
                         <h1>Hachem ,React</h1>
                         <p>{Math.random()*10}</p>
                         <p>{this.state.name} - {this.state.age}</p>
+                        <button onClick={this.handleClick}>Click me!</button>
+
                     </div>
                 )
             }
