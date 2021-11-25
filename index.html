@@ -19,10 +19,16 @@
         
         <script  type="text/babel">
         class App extends React.Component{
+            state={
+                name:'hachem',
+                age:32
+            }
             render(){
                 return (
                     <div className="app-content">
                         <h1>Hachem ,React</h1>
+                        <p>{Math.random()*10}</p>
+                        <p>{this.state.name} - {this.state.age}</p>
                     </div>
                 )
             }
