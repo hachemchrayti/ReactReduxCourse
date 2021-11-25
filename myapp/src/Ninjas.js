@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 
 //const Ninjas = (props) =>
-const Ninjas = ({ ninjas }) =>
+const Ninjas = ({ ninjas, DeleteNinja }) =>
 {
     let color = '';
     const ninjasList = ninjas.map(ninja =>
@@ -13,6 +13,7 @@ const Ninjas = ({ ninjas }) =>
                 <div style={{ color: color }}>Name: {ninja.name}</div>
                 <div>age: {ninja.age}</div>
                 <div>belt: {ninja.belt}</div>
+                <button onClick={() => { DeleteNinja(ninja.id) }} >Delete </button>
                 <p>**********************</p>
             </div>
         )

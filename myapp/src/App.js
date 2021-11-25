@@ -23,12 +23,23 @@ class App extends React.Component
     })
   }
 
+  DeleteNinja = (id) =>
+  {
+
+    let oldArr = this.state.ninjas.filter(n => n.id !== id)
+
+    this.setState({
+      ninjas: oldArr
+    })
+  }
+
+
   render()
   {
     return (
       <div className="App" >
         <h1>hachem</h1>
-        <Ninjas ninjas={this.state.ninjas}  ></Ninjas>
+        <Ninjas ninjas={this.state.ninjas} DeleteNinja={this.DeleteNinja}></Ninjas>
         <AddNinja AddNinja={this.AddNinja} />
       </div>
     );
