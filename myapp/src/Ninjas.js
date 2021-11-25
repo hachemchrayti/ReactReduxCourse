@@ -7,21 +7,15 @@ const Ninjas = ({ ninjas }) =>
     let color = '';
     const ninjasList = ninjas.map(ninja =>
     {
-        if (ninja.age > 30)
-        {
-            return (
-                <div className='ninja' key={ninja.id}>
-                    {color = ninja.name.startsWith('h') ? 'green' : 'red'}
-                    <div style={{ color: color }}>Name: {ninja.name}</div>
-                    <div>age: {ninja.age}</div>
-                    <div>belt: {ninja.belt}</div>
-                    <p>**********************</p>
-                </div>
-            )
-        } else
-        {
-            return null
-        }
+        return (
+            <div className='ninja' key={ninja.id}>
+                {color = ninja.name.startsWith('h') ? 'green' : 'red'}
+                <div style={{ color: color }}>Name: {ninja.name}</div>
+                <div>age: {ninja.age}</div>
+                <div>belt: {ninja.belt}</div>
+                <p>**********************</p>
+            </div>
+        )
 
     })
     return (
