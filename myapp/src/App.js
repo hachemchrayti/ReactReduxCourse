@@ -1,13 +1,24 @@
 import './App.css';
+import React, { Component } from "react";
 import Ninjas from './Ninjas'
-function App()
+class App extends React.Component
 {
-  return (
-    <div className="App">
-      <h1>hachem</h1>
-      <Ninjas name="hach" age="31" belt='white'  ></Ninjas>
-    </div>
-  );
+  state = {
+    ninjas: [
+      { name: 'hachem', age: 31, belt: 'white', id: 1 },
+      { name: 'ahmed', age: 30, belt: 'white', id: 2 },
+      { name: 'Amir', age: 32, belt: 'white', id: 3 }
+    ]
+  }
+  render()
+  {
+    return (
+      <div className="App" >
+        <h1>hachem</h1>
+        <Ninjas ninjas={this.state.ninjas}  ></Ninjas>
+      </div>
+    );
+  }
 }
 
 export default App;
