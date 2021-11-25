@@ -32,13 +32,27 @@
                })
                console.log(this.state);
             }
+            handleChange=(e)=>{
+                this.setState({
+                    name:e.target.value
+                })
+            }
+
+            handleSubmit=(e)=>{
+                e.preventDefault()
+                console.log(this.state.name);  
+            }
             render(){
                 return (
                     <div className="app-content">
-                        <h1>Hachem ,React</h1>
+                        <h1>My name is {this.state.name}</h1>
                         <p>{Math.random()*10}</p>
                         <p>{this.state.name} - {this.state.age}</p>
                         <button onClick={this.handleClick}>Click me!</button>
+                        <form onSubmit={this.handleSubmit}>
+                            <input type='text' onChange={this.handleChange}/> 
+                            <button type='submit'>Submit</button>   
+                        </form>
 
                     </div>
                 )
