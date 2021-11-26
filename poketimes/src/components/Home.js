@@ -2,6 +2,7 @@ import React from 'react'
 import { useEffect, useState } from "react";
 import axios from 'axios/'
 import { Link } from 'react-router-dom';
+import Pokeball from "../pokeball.png";
 export const Home = (props) =>
 {
 
@@ -25,9 +26,10 @@ export const Home = (props) =>
             {
                 return (
                     <div className='post card' key={p.id}>
+                        <img src={Pokeball} alt='pokball' />
                         <div className='card-content'>
                             <Link to={'posts/' + p.id}>
-                                <span className='card-title'>
+                                <span className='card-title red-text'>
                                     {p.title}
                                 </span>
                             </Link>
@@ -40,7 +42,7 @@ export const Home = (props) =>
             <div className='center'>No Posts yet...</div >
         )
     return (
-        <div className='container'>
+        <div className='container home'>
             <h4 className="center">Home</h4>
             {poststList}
         </div>
