@@ -1,7 +1,18 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
+
+
+
+
 
 export const Contact = (props) =>
 {
+    const navigate = useNavigate();
+
+    setTimeout(() =>
+    {
+        navigate('/about')
+    }, 2000);
     return (
         <div className='container'>
             <h4 className="center">Contact</h4>
