@@ -1,6 +1,6 @@
 import React from 'react'
-
-export const About = (props) =>
+import { Rainbow } from "../hoc/Rainbow";
+export const About = () =>
 {
     return (
         <div className='container'>
@@ -9,3 +9,5 @@ export const About = (props) =>
         </div>
     )
 }
+
+ //Rainbow(About)
